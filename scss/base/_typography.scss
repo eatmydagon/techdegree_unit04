@@ -1,0 +1,35 @@
+
+
+/* ============================================= */
+/*              Typography                       */
+/* ============================================= */
+
+* {
+  font-family: $font_stack;
+  color: $secondary_color;
+}
+
+.headline-primary {
+  color: $primary_color ;
+  margin-left: $gutter_s;
+}
+
+.headline-secondary {
+  font-weight: $font_w_s;
+  color: $secondary_color;
+}
+
+.link {
+  color: $default_color;
+  font-weight: $font_w_m;
+}
+
+.blockquote {
+  font-size: 1.5em;
+  font-weight: $font_w_s;
+  font-style: italic;
+  margin-left: $gutter_m;
+  padding-left: $gutter_m;
+  border-left: 8px solid $primary_color;
+  border-radius: 5px;
+}

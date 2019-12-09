@@ -1,0 +1,31 @@
+
+
+/* ============================================= */
+/*              Navigation                       */
+/* ============================================= */
+
+.nav {
+  padding-left: 0;
+  flex-basis: map-get($flex_basis, "col-12");
+  @include flex_styles($display: flex, $direction: column);
+  @include media {
+    @include flex_styles($direction: row, $justify: flex-end, $align: center);
+  }
+}
+
+.nav-link {
+  text-align: center;
+  border-radius: 5px;
+  padding: $gutter_s 0;
+  display: block;
+  width: 100%;
+  transition: background-color .2s ease-in-out,
+              color .2s ease-in-out;
+  &:hover {
+    color: $tertiary_color;
+    background-color: $primary_color;
+  }
+  @include media {
+    flex-basis: 100px;
+  }
+}

@@ -1,0 +1,56 @@
+
+/* ============================================= */
+/*              Grid System                      */
+/* ============================================= */
+
+.container {
+  padding: 0 $gutter_s;
+  @include media {
+    max-width: 1400px;
+    @include centered;
+  }
+}
+
+.row {
+  @include flex_styles($display: flex, $direction: column);
+  padding: 1em $gutter_s;
+  @include media {
+    @include flex_styles($direction: row);
+  }
+}
+
+[class^=col] {
+  margin-top: $gutter_s;
+  flex-basis: map-get($flex_basis, "col-12");
+  min-height: 25px;
+  padding: $gutter_s;
+  border-radius: 5px;
+  @include media {
+    margin-top: 0;
+    @include flex_styles($display: flex, $justify: center, $align: center);
+    + [class^=col] {
+      margin-left: $gutter_s;
+    }
+  }
+}
+
+.theme {
+  @include color_theme($color_themes);
+  &.centered {
+    @include media{
+      @include centered;
+    }
+  }
+}
+
+@include media {
+  @each $col, $value in $flex_basis {
+    .#{$col} {
+      flex-basis: $value;
+    }
+  }
+}
+
+.card {
+  flex-basis: map-get($flex_basis, "col-12");
+}

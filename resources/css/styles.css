@@ -1,0 +1,350 @@
+
+/* ============================================= */
+/*              Base styles                      */
+/* ============================================= */
+
+* {
+  /*done*/font-family: 'Lato', sans-serif; /* created V $font_stack */
+  /*done*/color: #777; /* created V $secondary_color */
+  /*done*/box-sizing: border-box;
+}
+
+p {
+  /*done*/line-height: 1.45em;
+}
+
+a {
+  /*done*/text-decoration: none;
+}
+
+
+/* ============================================= */
+/*              Typography                       */
+/* ============================================= */
+
+.headline-primary {
+  /*done*/color: #58e1c1; /* created V $primary_color */
+  /*done*/margin-left: 10px/* created V $gutter_s */;
+}
+
+.headline-secondary {
+  /*done*/font-weight: 300; /* created V $font_w_s */
+  /*done*/color: #777; /* created V $secondary_color */
+}
+
+.link {
+  /*done*/color: #51ddfc; /* created V $default_color */
+  /*done*/font-weight: 700; /* created V $font_w_m */
+}
+
+.blockquote {
+  /*done*/font-size: 1.5em;
+  /*done*/font-weight: 300; /* created V $font_w_s */
+  /*done*/font-style: italic;
+  /*done*/margin-left: 20px/* created V $gutter_m */;
+  /*done*/padding-left: 20px/* created V $gutter_m */;
+  /*done*/border-left: 8px solid #58e1c1/* created V $primary_color */;
+  /*done*/border-radius: 5px;
+}
+
+
+/* ============================================= */
+/*              Grid System                      */
+/* ============================================= */
+
+.container {
+/*done*/  padding: 0 10px/* created V $gutter_s */;
+}
+
+.row {
+/*done*/  display: flex;
+/*done*/  flex-direction: column;
+/*done*/  padding: 1em 10px/* created V $gutter_s */;
+}
+
+[class^=col] {
+/*done*/  margin-top: 10px/* created V $gutter_s */;
+/*done*/  flex-basis: 100%;
+/*done*/  min-height: 25px;
+/*done*/  padding: 10px/* created V $gutter_s */;
+/*done*/  border-radius: 5px;
+}
+
+/*done*/.theme.col-1 {
+  background-color: #927bc1;/* created V $info_color */
+}
+
+/*done*/.theme.col-2 {
+  background-color: #fd7856;/* created V $warning_color */
+}
+
+/*done*/.theme.col-3 {
+  background-color: #deb2ee;
+}
+
+/*done*/.theme.col-4 {
+  background-color: #7ee6fd;
+}
+
+/*done*/.theme.col-5 {
+  background-color: #88d9a0;
+}
+
+/*done*/.theme.col-6 {
+  background-color: #4da2bb;
+}
+
+/*done*/.theme.col-7 {
+  background-color: #ec9fa3;
+}
+
+/*done*/.theme.col-8 {
+  background-color: #fd9f85;
+}
+
+/*done*/.theme.col-9 {
+  background-color: #e4757a; /* created V $error_color */
+}
+
+/*done*/.theme.col-10 {
+  background-color: #63cc82;/* created V $sucess_color */
+}
+
+/*done*/.theme.col-11 {
+  background-color: #51ddfc; /* created V $default_color */
+}
+
+/*done*/.theme.col-12 {
+  background-color: #80e8d1;
+}
+
+/*done*/.card {
+  flex-basis: 100%;
+}
+
+
+/* ============================================= */
+/*              Navigation                       */
+/* ============================================= */
+
+.nav {
+/*done*/  padding-left: 0;
+/*done*/  flex-basis: 100%;
+/*done*/  display: flex;
+/*done*/  flex-direction: column;
+}
+
+.nav-link {
+/*done*/  text-align: center;
+/*done*/  border-radius: 5px;
+/*done*/  padding: 10px/* created V $gutter_s */ 0;
+/*done*/  display: block;
+/*done*/  width: 100%;
+/*done*/  transition:
+    background-color .2s ease-in-out,
+    color .2s ease-in-out;
+}
+
+.nav-link:hover {
+/*done*/  color: #fff; /* created V $tertiary_color */
+/*done*/  background-color: #58e1c1; /* created V $primary_color */
+}
+
+
+/* ============================================= */
+/*              Buttons                          */
+/* ============================================= */
+
+.btn {
+/*done*/  margin-top: 15px;
+/*done*/  width: 100%;
+/*done*/  color: #fff; /* created V $tertiary_color */
+/*done*/  border: none;
+/*done*/  padding: 10px/* created V $gutter_s */ 0;
+/*done*/  text-transform: uppercase;
+/*done*/  border-radius: 5px;
+}
+
+.default {
+/*done*/  background-color: #51ddfc;/* created V $default_color */
+}
+
+.error {
+/*done*/  background-color: #e4757a;/* created V $error_color */
+}
+
+.info {
+/*done*/  background-color: #927bc1; /* created V $info_color */
+}
+
+.success {
+/*done*/  background-color: #63cc82; /* created V $sucess_color */
+}
+
+.warning {
+/*done*/  background-color: #fd7856; /* created V $warning_color */
+}
+
+
+/* ============================================= */
+/*              Forms                            */
+/* ============================================= */
+
+.form {
+/*done*/  flex-basis: 100%;
+}
+
+.input{
+/*done*/  display: block;
+/*done*/  width: 94%;
+/*done*/  margin: 10px/* created V $gutter_s */ auto 0;
+/*done*/  border: none;
+/*done*/  padding: 10px/* created V $gutter_s */;
+/*done*/  border-bottom: 5px solid #58e1c1/* created V $primary_color */;
+}
+
+.hidden {
+/*done*/  position:absolute;
+/*done*/  left:-10000px;
+/*done*/  top:auto;
+/*done*/  width:1px;
+/*done*/  height:1px;
+/*done*/  overflow:hidden;
+}
+
+
+/* ============================================= */
+/*              Images                           */
+/* ============================================= */
+
+.img-avatar {
+/*done*/  display: block; /*created mixin centered*/
+/*done*/  margin-left: auto; /*created mixin centered*/
+/*done*/  margin-right: auto; /*created mixin centered*/
+/*done*/  margin-top: 10px/* created V $gutter_s */;
+/*done*/  max-width: 100%;
+/*done*/  max-height: 100%;
+}
+
+.img-frame {
+/*done*/  display: block; /*created mixin centered*/
+/*done*/  margin-left: auto; /*created mixin centered*/
+/*done*/  margin-right: auto; /*created mixin centered*/
+/*done*/  margin-top: 10px/* created V $gutter_s */;
+/*done*/  max-width: 100%;
+/*done*/  padding: 13px;
+/*done*/  border: 1px solid #ccc;
+}
+
+.img-logo {
+/*done*/  display: block; /*created mixin centered*/
+/*done*/  margin-left: auto; /*created mixin centered*/
+/*done*/  margin-right: auto; /*created mixin centered*/
+}
+
+
+/* ============================================= */
+/*              Media Queries                    */
+/* ============================================= */
+@media (min-width: 768px) {
+
+.container {
+/*done*/  max-width: 1400px;
+/*done*/  display: block; /*created mixin centered*/
+/*done*/  margin-left: auto; /*created mixin centered*/
+/*done*/  margin-right: auto; /*created mixin centered*/
+}
+
+.centered {
+/*done*/  display: block; /*created mixin centered*/
+/*done*/  margin-left: auto; /*created mixin centered*/
+/*done*/  margin-right: auto; /*created mixin centered*/
+}
+
+.row {
+/*done*/  flex-direction: row;
+}
+
+[class^=col] {
+/*done*/  display: flex;
+/*done*/  justify-content: center;
+/*done*/  margin-top: 0;
+/*done*/  align-items: center;
+}
+
+[class^=col] + [class^=col] {
+/*done*/  margin-left: 10px/* created V $gutter_s */;
+}
+
+.col-1 {
+/*done*/  flex-basis: 8.33%;
+}
+
+.col-2 {
+/*done*/  flex-basis: 16.67%;
+}
+
+.col-3 {
+/*done*/  flex-basis: 25.00%;
+}
+
+.col-4 {
+/*done*/  flex-basis: 33.33%;
+}
+
+.col-5 {
+/*done*/  flex-basis: 41.67%;
+}
+
+.col-6 {
+/*done*/  flex-basis: 50.00%;
+}
+
+.col-7 {
+/*done*/  flex-basis: 58.33%;
+}
+
+.col-8 {
+/*done*/  flex-basis: 66.67%;
+}
+
+.col-9 {
+/*done*/  flex-basis: 75.00%
+}
+
+.col-10 {
+/*done*/  flex-basis: 83.33%;
+}
+
+.col-11 {
+/*done*/  flex-basis: 91.67%;
+}
+
+.col-12 {
+/*done*/  flex-basis: 100%;
+}
+
+.nav {
+/*done*/  flex-direction: row;
+/*done*/  justify-content: flex-end;
+/*done*/  align-items: center;
+}
+
+.nav-link {
+/*done*/  flex-basis: 100px;
+}
+
+.btn {
+/*done*/  padding: 10px/* created V $gutter_s */ 30px;
+}
+
+.btn + .btn {
+/*done*/  margin-left: 10px/* created V $gutter_s */;
+}
+
+.logo {
+/*done*/  margin-left: initial;
+/*done*/  margin-right: initial;
+}
+
+}

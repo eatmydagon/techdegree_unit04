@@ -1,0 +1,41 @@
+
+// Mixin to Center Align content //
+@mixin centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Mixin to loop adding color themes to .col classes //
+@mixin color_theme($map) {
+  @each $col, $color in $map {
+    &.#{$col} {
+      background-color: $color;
+    }
+  }
+}
+
+// Mixin to define flex layout//
+@mixin flex_styles (
+  $display: null,
+  $direction: null,
+  $justify: null,
+  $align: null,){
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+  }
+
+// Mixin to add nested media queries//
+@mixin media {
+  @media only screen and (min-width: $break_m){
+    @content;
+  }
+}
+
+// Function to lighten a color value//
+@function hover($color_value, $lighten: 15%) {
+   $background: lighten($color_value, $lighten);
+   @return $background;
+}
